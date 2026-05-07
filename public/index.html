@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lavkesh — B.Tech CSE Student | Aspiring Web Developer. Portfolio showcasing projects, skills, and learning journey.">
+    <title>Lavkesh | Portfolio — B.Tech CSE Student</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo" id="nav-logo">LK.</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Open to internships & projects
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text" id="hero-name">Lavkesh</span>
+                </h1>
+                <p class="hero-subtitle" id="hero-bio">
+                    Second year B.Tech CSE student passionate about web development. Currently learning full-stack development with JavaScript, Node.js, and MongoDB.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get In Touch</a>
+                </div>
+                <div class="hero-stats" id="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-value" data-count="6">0</div>
+                        <div class="hero-stat-label">Projects</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value" data-count="2">0</div>
+                        <div class="hero-stat-label">Semester</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-value" data-count="16">0</div>
+                        <div class="hero-stat-label">Skills</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-code-card">
+                    <div class="code-header">
+                        <div class="code-dot code-dot--red"></div>
+                        <div class="code-dot code-dot--yellow"></div>
+                        <div class="code-dot code-dot--green"></div>
+                    </div>
+                    <div class="code-line"><span class="code-keyword">const</span> <span class="code-property">student</span> <span class="code-bracket">=</span> <span class="code-bracket">{</span></div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="code-property">name</span>: <span class="code-string">"Lavkesh"</span>,</div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="code-property">year</span>: <span class="code-string">"2nd Year B.Tech"</span>,</div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="code-property">learning</span>: <span class="code-bracket">[</span><span class="code-string">"JS"</span>, <span class="code-string">"Node"</span>, <span class="code-string">"Mongo"</span><span class="code-bracket">]</span>,</div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="code-property">goal</span>: <span class="code-string">"Full-Stack Dev"</span>,</div>
+                    <div class="code-line">&nbsp;&nbsp;<span class="code-property">coffee</span>: <span class="code-value">Infinity</span> <span class="code-comment">// ☕</span></div>
+                    <div class="code-line"><span class="code-bracket">}</span>;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">Projects I've built while learning web development — from simple apps to full-stack applications.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="projects-filter reveal" id="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-desc">Technologies and tools I'm learning and using in my projects.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="skills-categories reveal" id="skills-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Journey</span>
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-desc">My learning journey, college activities, and academic background.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="timeline reveal" id="timeline">
+                <!-- Dynamically populated -->
+            </div>
+            <div class="education-grid reveal" id="education-grid">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-desc">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <h3>Let's connect</h3>
+                    <p>I'm looking for internship opportunities and open to collaborating on projects. If you have an interesting idea or need help with web development — feel free to reach out!</p>
+                    <div class="contact-links" id="contact-links">
+                        <a href="mailto:lavkesh246@gmail.com" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                            <span id="contact-email">lavkesh246@gmail.com</span>
+                        </a>
+                        <a href="#" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <span id="contact-location">India</span>
+                        </a>
+                        <a href="#" class="contact-link" id="github-link">
+                            <div class="contact-link-icon"><i class="fab fa-github"></i></div>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="contact-link" id="linkedin-link">
+                            <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Full Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email-input">Email Address</label>
+                        <input type="email" id="contact-email-input" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-subject">Subject</label>
+                        <input type="text" id="contact-subject" name="subject" placeholder="Project Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                    <div class="form-message" id="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-text">&copy; 2025 <span id="footer-name">Lavkesh</span>. Built with <i class="fas fa-heart" style="color:var(--accent-orange)"></i> & Express.js</span>
+            <div class="footer-links">
+                <a href="#" id="footer-github" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" id="footer-linkedin" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" id="footer-twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
