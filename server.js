@@ -22,10 +22,14 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Ensure uploads directory exists
-const uploadsDir = path.join(__dirname, 'uploads');
-if (!fs.existsSync(uploadsDir)) {
-    fs.mkdirSync(uploadsDir, { recursive: true });
+// Ensure uploads directory exists (Use /tmp on Vercel as root is read-only)
+const uploadsDir = process.env.VERCEL ? '/tmp/uploads' : path.join(__dirname, 'uploads');
+try {
+    if (!fs.existsSync(uploadsDir)) {
+        fs.mkdirSync(uploadsDir, { recursive: true });
+    }
+} catch (err) {
+    console.warn('⚠️ Could not create uploads directory:', err.message);
 }
 app.use('/uploads', express.static(uploadsDir));
 
