@@ -188,7 +188,7 @@ app.get('/api/stats', async (req, res) => {
         const projects = await Project.countDocuments();
         const skills = await Skill.countDocuments();
         const contacts = await Contact.countDocuments();
-        res.json({ projects, skills, experience_years: 5, contacts });
+        res.json({ projects, skills, experience_years: 3, contacts });
     } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
